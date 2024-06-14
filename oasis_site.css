@@ -1,0 +1,127 @@
+h2 {
+  font-size: 25px;
+  color: pink;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 0 25px;
+}
+
+p {
+  padding: 0 25px;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  display: flex;
+  justify-content: flex-end;
+  border: 3px solid pink;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-logo {
+  height: 50px; /* adjust as needed */
+  margin-right: auto;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: pink;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slideshow::before,
+.slideshow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 30s infinite;
+  opacity: 0;
+}
+
+.slideshow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('imgs/cityscape1.png');
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 30s infinite;
+  opacity: 0;
+}
+
+.slideshow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('imgs/cityscape2.png');
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 30s infinite;
+  opacity: 0;
+}
+
+@keyframes slideshow {
+  10% { opacity: 1; }
+  20% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  50% { opacity: 0; }
+  60% { opacity: 1; }
+  70% { opacity: 1; }
+  80% { opacity: 1; }
+  90% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.content-section {
+  padding: 20px;
+  background-color: white;
+  /* Add padding from the top of the text box to the top of the html page */
+  margin-top: 50px;
+}
